@@ -10,13 +10,15 @@ export default class WeatherNow extends React.Component {
   
     return (
       <View style={styles.weatherNow}>
+        <View style = {styles.textContainer}>
+          <Text style = {styles.textDisplay}>
+              {this.props.temp}
+          </Text>
+        </View>
         <View style={styles.iconContainer}>
           <Image style={styles.icon} source={{uri: imageURL}} />
         </View>
-        <Text style = {styles.textDisplay}>
-            {this.props.temp} {this.props.fahrenheit ? 'F' : 'C'}
-        </Text>
-        </View>
+      </View>
     );
   }
 }
@@ -29,25 +31,20 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly'
   },
   iconContainer: {
-    borderColor: 'black',
-    borderWidth: 0.5,
-    borderStyle: 'solid', 
     flex: .5,
-    height: 150,
-    width: 150, 
   },
   icon: {
     width: 150, 
     height: 150,
   },
-
+  textContainer: {
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end'
+  },
   textDisplay: {
     flex: .4,
-    borderColor: 'black',
-    borderWidth: 0.5,
-    borderStyle: 'solid',
     fontSize: 40,
-    width: 150, 
-    height: 150,
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end'
   }
 });

@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import {iconKey} from './iconKey'
 
-export default class Forecast1Day extends React.Component {
-
+export default class Forecast1Hour extends React.Component {
+//all needs updating --not used
   render() {
    
     let imageURL = iconKey[this.props.icon];
